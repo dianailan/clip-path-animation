@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.content{
+    position: relative;
+}
+.content h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+}
+
+.content h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px blue;
+}
+.content h2:nth-child(2){
+    color:blue;
+    animation: animate 3s ease-in-out infinite;
+}
+@keyframes animate {
+    0%, 100%
+    {
+        clip-path: polygon(0% 55%, 14% 48%, 26% 50%, 38% 57%, 51% 65%, 68% 65%, 83% 62%, 100% 53%, 100% 100%, 0% 100%);
+
+    }
+    50%
+    {
+        clip-path: polygon(0 65%, 15% 68%, 32% 66%, 47% 59%, 60% 51%, 75% 47%, 88% 49%, 100% 56%, 100% 100%, 0% 100%);
+
+    }
+}
